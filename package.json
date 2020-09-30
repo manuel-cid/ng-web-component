@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall:bak": "ngcc",
+    "postinstall": "ngcc",
+    "build:external-custom-element:externals": "ng build --extra-webpack-config projects/external-custom-element/webpack.externals.js --prod --project external-custom-element --single-bundle"
   },
   "private": true,
   "dependencies": {
@@ -15,10 +18,15 @@
     "@angular/common": "~10.1.3",
     "@angular/compiler": "~10.1.3",
     "@angular/core": "~10.1.3",
+    "@angular/elements": "^10.1.3",
     "@angular/forms": "~10.1.3",
     "@angular/platform-browser": "~10.1.3",
     "@angular/platform-browser-dynamic": "~10.1.3",
     "@angular/router": "~10.1.3",
+    "@webcomponents/custom-elements": "^1.4.2",
+    "@webcomponents/webcomponentsjs": "^2.4.4",
+    "document-register-element": "^1.7.2",
+    "ngx-build-plus": "^10.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

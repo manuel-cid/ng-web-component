@@ -61,6 +61,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+import 'document-register-element';
 
 // Custom Elements polyfill. Required for browsers that do not natively support Custom Elements.
 import '@webcomponents/custom-elements';
