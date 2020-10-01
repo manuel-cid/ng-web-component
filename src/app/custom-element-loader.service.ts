@@ -13,7 +13,7 @@ export class CustomElementLoaderService {
     }
 
     const script = document.createElement('script');
-    script.src = 'assets/main.js';
+    script.src = 'assets/external-custom-element.js';
     document.body.appendChild(script);
     this.loaded = true;
   }

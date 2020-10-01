@@ -11,15 +11,20 @@ export class AppComponent {
 
   title = 'ng-web-component';
 
+  tag = 'external-custom-element';
+  url = 'assets/external-custom-element.js';
+  asdf = false;
+
   constructor(private loader: CustomElementLoaderService) { }
 
   loadExternal(): void {
-    this.loader.load();
+    this.asdf = true;
+    // this.loader.load();
 
-    const component = document.createElement('external-custom-element');
+    // const component = document.createElement(this.tag);
 
-    const content = document.getElementById('content');
-    content.appendChild(component);
+    // const content = document.getElementById('content');
+    // content.appendChild(component);
   }
 
 }
