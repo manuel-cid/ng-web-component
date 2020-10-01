@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "postinstall:bak": "ngcc",
     "postinstall": "ngcc",
-    "build:external-custom-element:externals": "ng build --extra-webpack-config projects/external-custom-element/webpack.externals.js --prod --project external-custom-element --single-bundle"
+    "build:external-custom-element:externals": "ng build --extra-webpack-config projects/external-custom-element/webpack.externals.js --prod --project external-custom-element --single-bundle",
+    "copy:external-custom-element": "npx cpr dist/external-custom-element/main.js src/assets/external-custom-element.js -o"
   },
   "private": true,
   "dependencies": {

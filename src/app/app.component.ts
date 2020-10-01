@@ -13,18 +13,16 @@ export class AppComponent {
 
   tag = 'external-custom-element';
   url = 'assets/external-custom-element.js';
-  asdf = false;
 
   constructor(private loader: CustomElementLoaderService) { }
 
   loadExternal(): void {
-    this.asdf = true;
-    // this.loader.load();
+    this.loader.load();
 
-    // const component = document.createElement(this.tag);
+    const component = document.createElement(this.tag);
 
-    // const content = document.getElementById('content');
-    // content.appendChild(component);
+    const content = document.getElementById('content');
+    content.appendChild(component);
   }
 
 }
